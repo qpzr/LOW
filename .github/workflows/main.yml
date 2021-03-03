@@ -63,7 +63,7 @@ jobs:
         echo -e "$(($(nproc)+1)) thread compile"
         make -j$(($(nproc)+1)) || make -j1 || make -j1 V=s
         
-    - name: Git push assets to gitee & coding
+    - name: Git push assets to 空投回国
       run: |
         cd openwrt/bin
         git init
