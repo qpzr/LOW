@@ -30,9 +30,3 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 echo '最新argon主题'
 rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  
- 
-echo '最新QCA包fast-classifier和shortcut-fe'
-rm -rf ./lean/fast-classifier
-rm -rf ./lean/shortcut-fe
-svn co https://github.com/jollaman999/openwrt/trunk/package/qca/fast-classifier
-svn co https://github.com/jollaman999/openwrt/trunk/package/qca/shortcut-fe
