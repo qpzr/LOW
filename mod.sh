@@ -30,4 +30,4 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config
