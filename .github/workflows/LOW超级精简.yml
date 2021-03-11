@@ -22,9 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
-    - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
+    - name: Prepare environment
       run: |
         sudo apt-get update
         sudo apt-get install libtool-bin gperf python-docutils autopoint gettext
@@ -63,7 +61,7 @@ jobs:
         echo -e "$(($(nproc)+1)) thread compile"
         make -j$(($(nproc)+1)) || make -j1 || make -j1 V=s
         
-    - name: Git push assets to 空投回国
+    - name: Git push assets to 
       run: |
         cd openwrt/bin
         git init
@@ -73,6 +71,18 @@ jobs:
         git commit -m "$(date "+%Y-%m-%d %H:%M")~千军万马来相见！" -a
         ${{ secrets.low }}
  
+    - name: Save Sdk to 0v0
+      run: |
+        mkdir -p my
+        mv -f openwrt/bin/targets/*/*/*.tar.xz my/sdk.tar.xz
+        cd my
+        git init
+        git config user.name "一支穿云箭"
+        git config user.email "action@github.com"
+        git add .
+        git commit -m "$(date "+%Y-%m-%d %H:%M")" -a
+        ${{ secrets.ovo }}
+      
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
