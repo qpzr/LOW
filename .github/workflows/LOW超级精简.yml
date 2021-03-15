@@ -61,7 +61,15 @@ jobs:
         echo -e "$(($(nproc)+1)) thread compile"
         make -j$(($(nproc)+1)) || make -j1 || make -j1 V=s
         
-    - name: Git push assets to 
+    - name: Upload Sdk to release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.pat }}
+      with:
+        tag_name: v5.4
+        files: openwrt/bin/targets/*/*/*.tar.xz
+        
+    - name: Push
       run: |
         cd openwrt/bin
         git init
@@ -70,19 +78,7 @@ jobs:
         git add .
         git commit -m "$(date "+%Y-%m-%d %H:%M")~千军万马来相见！" -a
         ${{ secrets.low }}
- 
-    - name: Save Sdk to 0v0
-      run: |
-        mkdir -p my
-        mv -f openwrt/bin/targets/*/*/*.tar.xz my/sdk.tar.xz
-        cd my
-        git init
-        git config user.name "一支穿云箭"
-        git config user.email "action@github.com"
-        git add .
-        git commit -m "$(date "+%Y-%m-%d %H:%M")" -a
-        ${{ secrets.ovo }}
-      
+
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
