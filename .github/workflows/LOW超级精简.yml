@@ -3,8 +3,6 @@ name: Lean's OpenWrt Nano
 on: 
   repository_dispatch:
   workflow_dispatch:
-  watch:
-    types: started
     
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
