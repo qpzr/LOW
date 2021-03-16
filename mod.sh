@@ -1,5 +1,7 @@
+#!/bin/bash
+#
 echo '修改机器名称'
-sed -i 's/OpenWrt/G-DOCK-2.0/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/G-DOCK/g' package/base-files/files/bin/config_generate
  
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
@@ -15,11 +17,12 @@ echo '去除默认bootstrap主题'
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
  
 echo '修改wifi名称'
-sed -i 's/OpenWrt/G-DOCK-2.0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
 echo '只编译快速转发'
-sed -i 's/+kmod-fast-classifier +pdnsd-alt +kmod-tcp-bbr/+kmod-fast-classifier/g' package/lean/luci-app-sfe/Makefile
-sed -i '32,45d' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
+sed -i 's/+kmod-fast-classifier +pdnsd-alt +kmod-tcp-bbr/+kmod-fast-classifier +kmod-tcp-bbr/g' package/lean/luci-app-sfe/Makefile
+sed -i '37,45d' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
+sed -i '7d' package/lean/luci-app-sfe/luasrc/view/sfe/status.htm
  
 echo '去吧皮卡丘'
 cd package
@@ -29,5 +32,5 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
  
 echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
