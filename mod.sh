@@ -22,7 +22,7 @@ sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 echo 'sfe设置'
 sed -i 's/+kmod-fast-classifier +pdnsd-alt +kmod-tcp-bbr/+kmod-fast-classifier/g' package/lean/luci-app-sfe/Makefile
 sed -i '32,45d' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
-sed -i 's/= 0/= 1/g' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
+#sed -i 's/= 0/= 1/g' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
 sed -i '5d;7d' package/lean/luci-app-sfe/luasrc/view/sfe/status.htm
  
 echo '去吧皮卡丘'
@@ -34,4 +34,4 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
+#git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
