@@ -24,10 +24,6 @@ sed -i 's/+kmod-fast-classifier +pdnsd-alt +kmod-tcp-bbr/+kmod-fast-classifier/g
 sed -i '32,45d' package/lean/luci-app-sfe/luasrc/model/cbi/sfe.lua
 sed -i '5d;7d;13d;15d;19d;21d' package/lean/luci-app-sfe/luasrc/view/sfe/status.htm
  
-echo '搞鬼搞怪'
-rm -rf ./target/linux/ipq40xx/config-5.4
-curl -O -L https://raw.githubusercontent.com/openwrt/openwrt/master/target/linux/ipq40xx/config-5.4 ./target/linux/ipq40xx/config-5.4
-
 echo '去吧皮卡丘'
 cd package
  
@@ -38,3 +34,9 @@ echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
+
+echo '搞鬼搞怪'
+cd openwrt/target/linux/ipq40xx
+rm -rf config-5.4
+curl -O -L https://raw.githubusercontent.com/openwrt/openwrt/master/target/linux/ipq40xx/config-5.4
+
