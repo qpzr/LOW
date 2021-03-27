@@ -35,8 +35,3 @@ rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
 
-echo '搞鬼搞怪'
-cd ../target/linux/ipq40xx
-rm -rf config-5.4
-curl -O -L https://raw.githubusercontent.com/openwrt/openwrt/master/target/linux/ipq40xx/config-5.4
-
