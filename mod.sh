@@ -7,7 +7,7 @@ echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
  
 echo '修改时区NTP'
-sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+#sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 sed -i 's/ntp1.aliyun.com/cn.ntp.org.cn/g' package/base-files/files/bin/config_generate
 sed -i 's/time1.cloud.tencent.com/ntp.ntsc.ac.cn/g' package/base-files/files/bin/config_generate
 sed -i '/time.ustc.edu.cn/d' package/base-files/files/bin/config_generate
