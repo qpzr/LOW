@@ -27,11 +27,11 @@ sed -i '5d;7d;13d;15d;19d;21d' package/lean/luci-app-sfe/luasrc/view/sfe/status.
 echo '去吧皮卡丘'
 cd package
  
-echo 'luci-app-AdGuard Home'
+echo 'luci-app-AdGuardHome'
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
  
 echo '最新argon主题和设置'
-rm -rf ./lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
+#rm -rf ./lean/luci-theme-argon
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
+
 
