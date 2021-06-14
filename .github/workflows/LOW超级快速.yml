@@ -24,7 +24,7 @@ jobs:
     - name: Prepare environment
       run: |
         sudo -E apt-get update
-        sudo -E apt-get install libtool-bin gperf python-docutils autopoint gettext
+        sudo -E apt-get install libtool-bin gperf python3-docutils autopoint gettext
         sudo timedatectl set-timezone "Asia/Shanghai"
         
     - name: Clone source code
