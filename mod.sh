@@ -20,10 +20,10 @@ echo '修改wifi名称'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
 echo 'Turboacc设置'
-sed -i 's/+pdnsd-alt/+kmod-fast-classifier +kmod-ipt-offload/g' package/lean/luci-app-turboacc/Makefile
+sed -i 's/+pdnsd-alt/+kmod-ipt-offload/g' package/lean/luci-app-turboacc/Makefile
 sed -i '47,49d' package/lean/luci-app-turboacc/Makefile
 sed -i '33,43d' package/lean/luci-app-turboacc/Makefile
-sed -i '16,18d' package/lean/luci-app-turboacc/Makefile
+sed -i '16,19d' package/lean/luci-app-turboacc/Makefile
 sed -i '58,77d' package/lean/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '46,50d' package/lean/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '6d;7d;13d;15d;20d;21d' package/lean/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
