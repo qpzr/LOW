@@ -32,7 +32,7 @@ echo '去吧皮卡丘'
 cd package
  
 echo 'luci-app-AdGuardHome'
-svn export https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
  
 echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
