@@ -38,6 +38,3 @@ echo '最新argon主题和设置'
 rm -rf ./lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
 
-echo '最新neobird主题和设置'
-rm -rf luci-theme-neobird  
-git clone https://github.com/thinktip/luci-theme-neobird.git  luci-theme-neobird
