@@ -20,13 +20,13 @@ echo '修改wifi名称'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
 echo 'Turboacc设置'
-sed -i 's/+pdnsd-alt/+kmod-ipt-offload/g' package/lean/luci-app-turboacc/Makefile
-sed -i '47,57d' package/lean/luci-app-turboacc/Makefile
-sed -i '25,27d' package/lean/luci-app-turboacc/Makefile
-sed -i '15,17d' package/lean/luci-app-turboacc/Makefile
-sed -i '46,66d' package/lean/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
-sed -i '34,38d' package/lean/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
-sed -i '6d;7d;13d;15d;20d;21d' package/lean/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
+sed -i 's/+pdnsd-alt/+kmod-ipt-offload/g' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '47,57d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '25,27d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '15,17d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '46,66d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
+sed -i '34,38d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
+sed -i '6d;7d;13d;15d;20d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
 cd package
@@ -35,6 +35,6 @@ echo 'luci-app-AdGuardHome'
 svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
  
 echo '最新argon主题和设置'
-rm -rf ./lean/luci-theme-argon
+rm -rf ./feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon  luci-theme-argon
 
