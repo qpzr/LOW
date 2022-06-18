@@ -21,10 +21,14 @@ sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
 echo 'Turboacc设置'
 sed -i 's/+pdnsd-alt/+kmod-ipt-offload/g' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '51,57d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '26,28d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '53,59d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '37,48d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '28,29d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '25,26d' feeds/luci/applications/luci-app-turboacc/Makefile
+sed -i '19,20d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '16,17d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '46,66d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
+sed -i '53,73d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
+sed -i '24,41d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '7d;15d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
