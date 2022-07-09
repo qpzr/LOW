@@ -23,10 +23,6 @@ echo 'Turboacc设置'
 sed -i 's/PDNSD:pdnsd-alt/OFFLOADING:kmod-ipt-offload/g' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '52,63d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '37,48d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '28,29d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '25,26d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '19,20d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '16,17d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '54,78d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '7d;15d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
