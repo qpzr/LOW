@@ -27,7 +27,7 @@ sed -i '28,29d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '25,26d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '19,20d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '54,78d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
-sed -i '24,41d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
+sed -i '35,41d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '7d;15d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
