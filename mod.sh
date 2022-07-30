@@ -27,7 +27,7 @@ sed -i '54,78d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turbo
 sed -i '7d;15d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
-cd package
+cd package/luci
  
 echo 'luci-app-AdGuardHome'
 svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
