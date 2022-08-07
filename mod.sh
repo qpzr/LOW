@@ -20,9 +20,7 @@ echo '修改wifi名称'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
 echo 'Turboacc设置'
-sed -i 's/TARGET_mediatek/TARGET_ipq40xx/g' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '60,70d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '39,54d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '54,78d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
 sed -i '7d;15d;21d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
