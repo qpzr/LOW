@@ -68,7 +68,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.pat }}
         
     - name: Upload Sdk to release
-      uses: softprops/action-gh-release@main
+      uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.pat }}
       with:
