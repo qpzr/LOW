@@ -28,7 +28,8 @@ echo '去吧皮卡丘'
 cd package
  
 echo 'luci-app-AdGuardHome'
-svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
+#svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
+git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
 echo '最新argon主题和设置'
 rm -rf ../feeds/luci/themes/luci-theme-argon
