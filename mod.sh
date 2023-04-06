@@ -31,6 +31,9 @@ echo 'luci-app-AdGuardHome'
 #svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
 git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
-echo '最新argon主题和设置'
+echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+
+echo '最新design主题'
+git clone -b master https://github.com/gngpp/luci-theme-design luci-theme-design
