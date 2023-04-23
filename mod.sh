@@ -35,5 +35,3 @@ echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 
-echo '最新design主题'
-git clone -b main https://github.com/gngpp/luci-theme-design luci-theme-design
