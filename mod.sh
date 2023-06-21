@@ -36,5 +36,4 @@ rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 
 echo '最新微信推送'
-rm -rf ../feeds/luci/applications/luci-app-serverchan
 git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush luci-app-wechatpush
