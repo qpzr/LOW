@@ -64,8 +64,7 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        echo -e "$(($(nproc)+1)) thread compile"
-        make -j$(($(nproc)+1)) V=s
+        make V=s -j$(nproc)
         
     - name: Push  
       run: |
