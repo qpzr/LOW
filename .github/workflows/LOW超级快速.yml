@@ -9,8 +9,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: gdock128.config
-  DIY_P1_SH: sdk.sh
-  DIY_P2_SH: mod.sh
+  DIY_P1_SH: mod.sh
 
 jobs:
   build:
@@ -35,6 +34,12 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+
+    - name: Cache
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: ${{ github.workspace }}/openwrt
         
     - name: Cache
       uses: klever1988/cachewrtbuild@main
@@ -46,21 +51,14 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-        
-    - name: Prepare toolchain
-      run: |
-        chmod +x $DIY_P1_SH
-        cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+      run: cd openwrt && ./scripts/feeds install -a        
         
     - name: Load custom configuration
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
+        chmod +x $DIY_P1_SH
         cd openwrt
-        sed -i '/CONFIG_SDK=y/d' .config
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        $GITHUB_WORKSPACE/$DIY_P1_SH
   
     - name: Download package
       id: package
