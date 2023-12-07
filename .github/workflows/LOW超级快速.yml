@@ -27,10 +27,12 @@ jobs:
         sudo -E apt-get install libtool-bin gperf python3-docutils autopoint gettext
         sudo timedatectl set-timezone "Asia/Shanghai"
         sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
         
     - name: Clone source code
       working-directory: /workdir
       run: |
+        df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
