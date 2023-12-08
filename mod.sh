@@ -28,7 +28,7 @@ echo '去吧皮卡丘'
 cd package
  
 echo 'luci-app-AdGuardHome'
-git_clone -b other https://github.com/Lienol/openwrt-package luci-app-adguardhome
+git_clone_path other https://github.com/Lienol/openwrt-package luci-app-adguardhome
 #git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
 echo '最新argon主题'
