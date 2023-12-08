@@ -25,8 +25,10 @@ sed -i '57,81d;45,49d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cb
 sed -i '20,21d;13d;15d;6,7d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
+
 cd package
- 
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-softethervpn
+
 echo 'luci-app-AdGuardHome'
 svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
 #git clone -b master https://github.com/kongfl888/luci-app-adguardhome
