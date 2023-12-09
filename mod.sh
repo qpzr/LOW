@@ -27,6 +27,8 @@ sed -i '20,21d;13d;15d;6,7d' feeds/luci/applications/luci-app-turboacc/luasrc/vi
 echo '去吧皮卡丘'
 
 cd package
+echo '虚拟专用网'
+rm -rf ../feeds/luci/applications/luci-app-softethervpn
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-softethervpn
 
 echo 'luci-app-AdGuardHome'
