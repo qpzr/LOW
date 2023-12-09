@@ -28,8 +28,9 @@ echo '去吧皮卡丘'
 
 cd package
 echo '虚拟专用网'
-rm -rf ../feeds/luci/applications/luci-app-softethervpn
-svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-softethervpn
+rm -rf ../feeds/luci/applications/luci-app-ipsec-vpnd
+rm -rf ../feeds/luci/applications/luci-app-ipsec-server
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-ipsec-server
 
 echo 'luci-app-AdGuardHome'
 svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
