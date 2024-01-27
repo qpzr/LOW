@@ -30,10 +30,15 @@ cd package
 echo '虚拟专用网'
 rm -rf ../feeds/luci/applications/luci-app-openvpn-client
 rm -rf ../feeds/luci/applications/luci-app-openvpn-server
-svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-openvpn-server
+git clone https://github.com/Lienol/openwrt-package main
+cp -rf main/luci-app-openvpn-server ../feeds/luci/applications/luci-app-openvpn-server
+rm -rf main
+#svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-openvpn-server
 
 echo 'luci-app-AdGuardHome'
-svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
+git clone -b other https://github.com/Lienol/openwrt-package 
+cp -rf other/luci-app-adguardhome ../feeds/luci/applications/luci-app-adguardhome
+rm -rf other
 #git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
 echo '最新argon主题'
