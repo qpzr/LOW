@@ -37,7 +37,7 @@ rm -rf main
 
 echo 'luci-app-AdGuardHome'
 git clone -b other https://github.com/Lienol/openwrt-package 
-cp -rf other/luci-app-adguardhome ../feeds/luci/applications/luci-app-adguardhome
+cp -rf other/luci-app-adguardhome luci-app-adguardhome
 rm -rf other
 #git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
