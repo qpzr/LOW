@@ -22,7 +22,7 @@ sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 echo '修改Turboacc设置'
 sed -i '60,70d' feeds/luci/applications/luci-app-turboacc/Makefile
 sed -i '57,81d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
-sed -i '21;15d;7d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
+sed -i '21d;15d;7d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
  
 echo '去吧皮卡丘'
 
