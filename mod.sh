@@ -45,5 +45,5 @@ echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 
-echo 'DDNS-GO'
-git clone https://github.com/sirpdboy/luci-app-ddns-go ddns-go
+echo 'wechatpush'
+git clone https://github.com/tty228/luci-app-wechatpush.git wechatpush
