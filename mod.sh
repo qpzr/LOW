@@ -27,13 +27,6 @@ sed -i '21d;15d;7d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboa
 echo '去吧皮卡丘'
 
 cd package
-echo '虚拟专用网'
-rm -rf ../feeds/luci/applications/luci-app-openvpn-client
-rm -rf ../feeds/luci/applications/luci-app-openvpn-server
-git clone https://github.com/Lienol/openwrt-package main
-cp -rf main/luci-app-openvpn-server ../feeds/luci/applications/luci-app-openvpn-server
-rm -rf main
-#svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-openvpn-server
 
 echo 'luci-app-AdGuardHome'
 git clone -b other https://github.com/Lienol/openwrt-package 
@@ -44,6 +37,3 @@ rm -rf other
 echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
-
-echo 'wechatpush'
-git clone https://github.com/tty228/luci-app-wechatpush.git wechatpush
