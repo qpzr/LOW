@@ -6,13 +6,6 @@ sed -i 's/OpenWrt/G-DOCK/g' package/base-files/files/bin/config_generate
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
  
-echo '修改时区NTP'
-#sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
-sed -i 's/ntp.aliyun.com/cn.ntp.org.cn/g' package/base-files/files/bin/config_generate
-sed -i 's/time1.cloud.tencent.com/ntp.ntsc.ac.cn/g' package/base-files/files/bin/config_generate
-sed -i '/time.ustc.edu.cn/d' package/base-files/files/bin/config_generate
-sed -i '/cn.pool.ntp.org/d' package/base-files/files/bin/config_generate
- 
 echo '去除默认bootstrap主题'
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
  
