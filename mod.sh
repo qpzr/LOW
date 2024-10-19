@@ -12,11 +12,6 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 echo '修改wifi名称'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
  
-echo '修改Turboacc设置'
-sed -i '62,72d' feeds/luci/applications/luci-app-turboacc/Makefile
-sed -i '57,81d' feeds/luci/applications/luci-app-turboacc/luasrc/model/cbi/turboacc.lua
-sed -i '21d;15d;7d' feeds/luci/applications/luci-app-turboacc/luasrc/view/turboacc/turboacc_status.htm
- 
 echo '去吧皮卡丘'
 
 cd package
@@ -29,4 +24,4 @@ rm -rf other
  
 echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
