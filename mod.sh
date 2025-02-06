@@ -11,9 +11,12 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
  
 echo '修改wifi名称'
 sed -i 's/LEDE/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
- 
-echo '去吧皮卡丘'
 
+echo 'Turboacc设置'
+sed -i 's/+xz//g' feeds/luci/applications/luci-app-adguardhome/Makefile
+sed -i 's/+xz-utils//g' feeds/luci/applications/luci-app-adguardhome/Makefile
+
+echo '去吧皮卡丘'
 cd package
 
 #echo 'luci-app-AdGuardHome'
