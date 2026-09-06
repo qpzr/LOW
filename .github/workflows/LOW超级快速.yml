@@ -36,7 +36,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-#        sed -i 's/23.05/24.10/g' openwrt/feeds.conf.default
+        sed -i '/helloworld/d' openwrt/feeds.conf.default
         
     - name: Cache
       uses: klever1988/cachewrtbuild@main
