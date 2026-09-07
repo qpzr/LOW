@@ -13,7 +13,7 @@ echo '修改wifi名称'
 sed -i 's/LEDE/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 echo 'Turboacc设置'
-sed -i 's/5.10/6.18/g' target/linux/ipq40xx/Makefile
+#sed -i 's/5.10/6.18/g' target/linux/ipq40xx/Makefile
 #sed -i 's/+adguardhome +luci-base/+luci-base/g' feeds/luci/applications/luci-app-adguardhome/Makefile
 #sed -i 's/LUCI_EXTRA_DEPENDS/d' feeds/luci/applications/luci-app-adguardhome/Makefile
 
