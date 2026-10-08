@@ -14,13 +14,13 @@ sed -i 's/LEDE/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 echo 'Turboacc设置'
 #sed -i 's/5.10/6.18/g' target/linux/ipq40xx/Makefile
-#sed -i 's/+adguardhome +luci-base/+luci-base/g' feeds/luci/applications/luci-app-adguardhome/Makefile
 #sed -i 's/LUCI_EXTRA_DEPENDS/d' feeds/luci/applications/luci-app-adguardhome/Makefile
 
 echo '去吧皮卡丘'
 cd package
 
 echo 'luci-app-AdGuardHome'
+rm -rf ../feeds/luci/applications/luci-theme-adguardhome
 git clone https://github.com/Lienol/openwrt-package openwrt-package
 cp -rf openwrt-package/other/luci-app-adguardhome luci-app-adguardhome
 rm -rf openwrt-package
