@@ -17,13 +17,11 @@ echo 'Turboacc设置'
 #sed -i 's/LUCI_EXTRA_DEPENDS/d' feeds/luci/applications/luci-app-adguardhome/Makefile
 
 echo '去吧皮卡丘'
-cd package
 
+#cd package
 echo 'luci-app-AdGuardHome'
-rm -rf ../feeds/luci/applications/luci-theme-adguardhome
-git clone https://github.com/Lienol/openwrt-package openwrt-package
-cp -rf openwrt-package/other/luci-app-adguardhome luci-app-adguardhome
-rm -rf openwrt-package
+rm -rf feeds/luci/applications/luci-theme-adguardhome
+git_clone_path main https://github.com/Lienol/openwrt-package/other/luci-app-adguardhome feeds/luci/applications/luci-theme-adguardhome
 #git clone -b master https://github.com/kongfl888/luci-app-adguardhome
  
 echo '最新argon主题'
