@@ -12,7 +12,7 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 echo '修改wifi名称'
 sed -i 's/LEDE/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-echo 'Turboacc设置'
+#echo 'Turboacc设置'
 #sed -i 's/5.10/6.18/g' target/linux/ipq40xx/Makefile
 #sed -i 's/LUCI_EXTRA_DEPENDS/d' feeds/luci/applications/luci-app-adguardhome/Makefile
 
@@ -21,11 +21,8 @@ echo '去吧皮卡丘'
 cd package
 echo 'luci-app-AdGuardHome'
 rm -rf ../feeds/luci/applications/luci-theme-adguardhome
-git clone https://github.com/Lienol/openwrt-package 1 
-cp -rf ./1/other/luci-app-adguardhome luci-theme-adguardhome
-rm -rf ./1
-#git clone -b master https://github.com/kongfl888/luci-app-adguardhome
- 
+git clone https://github.com/JaneCCP/luci-app-adguardhome luci-app-adguardhome
+
 echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
