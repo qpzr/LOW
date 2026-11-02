@@ -22,6 +22,9 @@ cd package
 echo 'luci-app-AdGuardHome'
 rm -rf ../feeds/luci/applications/luci-app-adguardhome
 git clone https://github.com/JaneCCP/luci-app-adguardhome luci-app-adguardhome
+#git clone https://github.com/Lienol/openwrt-package 1 
+#mv -f ./1/other/luci-app-adguardhome ./luci-app-adguardhome
+#rm -rf ./1
 
 echo '最新argon主题'
 rm -rf ../feeds/luci/themes/luci-theme-argon
