@@ -20,7 +20,7 @@ echo '去吧皮卡丘'
 
 cd package
 echo 'luci-app-AdGuardHome'
-rm -rf ../feeds/luci/applications/luci-theme-adguardhome
+rm -rf ../feeds/luci/applications/luci-app-adguardhome
 git clone https://github.com/JaneCCP/luci-app-adguardhome luci-app-adguardhome
 
 echo '最新argon主题'
